@@ -1,0 +1,98 @@
+<html>
+<head>
+    <!-- links to import fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Cinzel&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="game2.css">
+</head>
+<body>
+    <div class = "entire-box">
+    <div class = "heading-box">
+    <h1 class = "heading">World War 1 Quiz</h1>
+    </div>
+
+<div class= "question">
+<form name="fname" method="post">
+		<div id="ques">When did World War I started?</div>
+		<div id="ans">
+			<input type="radio" name="q1" id="qno11" value="0">1909
+			<input type="radio" name="q1" id="corr11" value="1">1914
+			<input type="radio" name="q1" id="qno12" value="0">1912 
+		</div><br>
+
+		<div id="ques">When did World War I ended?</div>
+		<div id="ans">
+			<input type="radio" name="q4" id="corr41" value="1">1918
+			<input type="radio" name="q4" id="qno42" value="0">1913
+			<input type="radio" name="q4" id="qno42" value="0">1916
+		</div><br>
+
+		<div id="ques">How many soldiers were killed in WWI? </div>
+		<div id="ans">
+			<input type="radio" name="q5" id="qno51" value="0">15 Million
+			<input type="radio" name="q5" id="qno51" value="0">20 Million 
+			<input type="radio" name="q5" id="corr51" value="1">9 Million
+		</div><br>
+		
+		<div id="ques">Which countries were there in allies power ?</div>
+		<div id="ans">
+			<input type="radio" name="q2" id="corr21" value="1"> Russia, France, Japan, British Empire, Montenegro, Belgium <br>
+			<input type="radio" name="q2" id="qno22" value="0"> Russia, USA, Japan, British Empire, Switzerland<br>
+			<input type="radio" name="q2" id="qno22" value="0"> Austria, France, Japan, British Empire, Switzerland 
+		</div><br>
+
+		<div id="ques">Which countries were there in axis power ?</div>
+		<div id="ans">
+			<input type="radio" name="q3" id="qno31" value="0"> Germany, France, Switzerland, India, Rhineland<br>
+			<input type="radio" name="q3" id="qno31" value="0"> Germany, Austria-Hungary, The USSR, and Italy<br>
+			<input type="radio" name="q3" id="corr31" value="1"> Germany, Austria-Hungary, Ottoman Empire, Bulgaria 
+		</div><br>
+
+		<div id="subbut">
+			<input type="button" value="Submit" onclick="quiz()">
+		</div>
+	<div class = "time-left">
+		<span>Time left:</span>
+		<span id = "countdown">40</span>
+		<span>Secs</span>
+    </div>
+		
+</form>
+</div>
+</div>
+<input type = "button" value = "&#x2190;" onclick = "goback()" class = "btn" id ="btn-back">
+
+<script type="text/javascript">
+function ending(){
+	var seconds = document.getElementById("countdown").textContent;
+	seconds--
+	document.getElementById("countdown").textContent = seconds;
+	if(seconds == -1){
+		alert("Times up!! Retry 🙄")
+		quiz();
+		window.location.reload();
+	}
+}
+setInterval(ending,1000);
+
+function quiz(){
+	var total=0;
+	var x = document.forms[0];
+	for(var i=0;i<x.length;i++){
+		if(x[i].checked){
+			total=total+ parseInt(x[i].value);
+		}
+	}
+	alert("your total score is: " + total)
+	window.location.reload();
+}
+
+function goback(){
+	window.history.back()
+}
+
+</script>
+</body>
+</html> 

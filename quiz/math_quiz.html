@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- links to import fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Cinzel&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="math_quiz.css">
+</head>
+<body>
+    <div class = "entire-box">
+    <div class = "heading-box">
+    <h1 class = "heading">math quiz game</h1>
+    </div>
+    <div id = qbox-div>
+    <input type = "text" id="bx1" class = "qbox" onchange = "nocheating()">
+    <p><font size ="24px" color = "white">+</font></p>
+    <input type = "text" id="bx2" class = "qbox" onchange = "nocheating()">
+    </div>
+    <input type="text" id="answer" class = "in-box" placeholder=" your answer">
+    <br>
+    <br>
+    <div id="btn-div">
+    <input type="button" value="submit" onclick="checkans()" class = "btn">
+    </div>
+    <br>
+    <div id = "btn-skip">
+    <input type="button" value="skip" onclick="window.location.reload()" class = "btn">
+    </div>
+    <br>
+    <br>
+    <div id = "time-left">
+    <span>time left:</span>
+    <span id = "countdown">30</span>
+    </div>
+    </div>
+    <input type="button" value="&#x2190;" onclick="goback()" class = "btn-back">
+
+    <script>
+        var int1 = Math.floor(Math.random() * 100)
+        var int2 = Math.floor(Math.random() * 100)
+        var q1 = document.getElementById("bx1").value = int1;
+        var q2 = document.getElementById("bx2").value = int2;
+        var total = q1 + q2;
+        var score = 0;
+            
+        function checkans(){
+            var ans = document.getElementById("answer").value;
+            if(ans == total){
+                score++;
+                alert("correct answer!!");
+                window.location.reload();
+            }
+            else{
+                score--;
+                alert("wrong answer! Don't sleep during maths class")
+                window.location.reload();
+            }
+        }
+
+        function nocheating(){
+            alert("Thats cheating, don't try to change the numbers, now questions will change")
+            window.location.reload()
+        }
+
+        function timeover(){
+            var seconds = document.getElementById("countdown").textContent;
+            seconds--
+            document.getElementById("countdown").textContent = seconds;
+            if(seconds == 0){
+                alert("times up, page will now reload")
+                window.location.reload();
+            }
+        }
+        setInterval(timeover, 1000);
+        function goback(){
+            window.history.back()
+        }
+    </script>
+</body>
+</html>

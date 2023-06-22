@@ -1,0 +1,64 @@
+    * {
+        padding: 5;
+        margin: 10;
+    }
+    
+    body {
+        background-image: url('https://cdn2.unrealengine.com/Fortnite%2Fbattle-royale%2Ffortnite-sniper-1920x1080-f072fcef414cbe680e369a16a8d059d8a01c7636.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .heading{
+        /* background-color: aqua; */
+        position: absolute;
+        float: left;
+        left: 27.15%;
+        top: 1%;
+    }
+
+    .heading-h1{
+        font-size: 14vh;
+        color: white;
+        font-family: 'Fjalla One', sans-serif;
+        text-transform: capitalize;
+        text-decoration: none;
+    }
+    
+    #main-content {
+        /* background-color: brown; */
+        height:800px;
+        width: 800px;
+        margin-left: 13cm;
+        margin-top: 6cm;
+    }
+    
+    li {
+        font-size: 70px;
+        padding-top: 50px;
+        font-family: 'Fjalla One', sans-serif;
+        /* font-family: 'Patrick Hand', cursive; */
+    }
+    
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    /* codes for span */
+    
+    #power {
+        color: transparent;
+        font-size: 45px;
+    }
+    
+    #spanbox {
+        position: absolute;
+        /* background-color: blue; */
+        width: 700px;
+        height: 400px;
+        right: 4px;
+    }
+    
+    #anime {
+        font-size: 50px;
+    }

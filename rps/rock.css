@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: rgb(0,113,255);
+    background: linear-gradient(90deg, rgba(0,113,255,1) 0%, rgba(14,0,177,1) 49%, rgba(59,0,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0071ff",endColorstr="#3b00ff",GradientType=1);
+}
+
+.heading{
+    text-transform: capitalize;
+    /* background-color: blue; */
+    position: relative;
+    font-family: 'Sansita Swashed', cursive;
+    color: #fff;
+    width: fit-content;
+    height: fit-content;
+    top: 100px;
+    left: 280px;
+    font-size: 6vh;
+}
+.btn-div{
+    display: flex;
+    position: relative;
+    left: 35%;
+    bottom: -200px;
+    text-transform: capitalize;
+    /* background-color: aqua; */
+}
+#btn-rock{
+    position: relative;
+    border-radius: 10%;
+    font-size: 24px;
+    left: -10%;
+    text-transform: capitalize;
+    width: 10%;
+    font-family: 'PT Serif', serif;
+    padding: 25px;
+    background-color: transparent;
+    border: #fff solid 3px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#btn-paper{
+    position: relative;
+    font-size: 24px;
+    border-radius: 10%;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-family: 'PT Serif', serif;
+    left: 0%;
+    width: 10%;
+    padding: 25px;
+    height: 40%;
+    background-color: transparent;
+    border: #fff solid 3px;
+    color: #fff;
+}
+
+#btn-scissor{
+    cursor: pointer;
+    border-radius: 10%;
+    font-family: 'PT Serif', serif;
+    text-transform: capitalize;
+    position: relative;
+    font-size: 24px;
+    left: 10%;
+    width: 10%;
+    padding: 25px;
+    height: 40%;
+    background-color: transparent;
+    border: #fff solid 3px;
+    color: #fff;
+}
+
+#btn-reset{
+    cursor: pointer;
+    border-radius: 10%;
+    position: relative;
+    text-transform: capitalize;
+    font-family: 'PT Serif', serif;
+    font-size: 24px;
+    right: 20%;
+    top: 250px;
+    width: 10%;
+    padding: 25px;
+    height: 40%;
+    background-color: transparent;
+    border: #fff solid 3px;
+    color: #fff;
+}
+
+#btn-back{
+    cursor: pointer;
+    border-radius: 10%;
+    position: relative;
+    /* text-transform: capitalize; */
+    font-weight: bolder;
+    /* float: left; */
+    font-style: bold;
+    outline: none;
+    font-family: 'PT Serif', serif;
+    font-size: 5vh;
+    left: 0%;
+    bottom: 170px;
+    width: 5%;
+    padding: 10px;
+    height: 5%;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+
+.score{
+    /* background-color: aqua; */
+    width: max-content;
+    height: fit-content;
+    position: relative;
+    top: 250px;
+    left: 50%;
+    display: flex;
+    margin-left: 25px;
+}
+
+#user_score{
+    position: relative;
+    right: 400px;
+    font-size: 40px;
+    font-family: 'Sansita Swashed', cursive;
+    text-transform: capitalize;
+    color: white;
+}
+
+#comp_score{
+    position: relative;
+    left: 100px;
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 40px;
+    color: white;
+    text-transform: capitalize;
+}
+
+#tie{
+    text-transform: capitalize;
+    position: relative;
+    font-family: 'Sansita Swashed', cursive;
+    left: -390px;
+    font-size: 40px;
+    color: white;
+}

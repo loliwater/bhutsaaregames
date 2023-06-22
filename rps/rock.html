@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="rock.js"></script>
+    <link rel="stylesheet" href="rock.css">
+    <!-- importing fonts for css -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet"> 
+
+
+
+</head>
+<body>
+    <div class="heading">
+        <h1>rock paper scissors game</h1>
+    </div>
+    <div class="btn-div">
+        <input type="button" value="rock 👊 " onclick="rock()" class = "btn" id = "btn-rock"><br>
+        <input type="button" value="paper ✋" onclick = "paper()" class = "btn" id = "btn-paper"><br>
+        <input type="button" value="scissors ✌" onclick="scissors()" class = "btn" id = "btn-scissor">
+        <input type="button" value="reset ❌" onclick="resetall()" class = "btn" id = "btn-reset">
+    </div>
+        <input type = "button" value = "&#x2190;" onclick = "goback()" class = "btn" id ="btn-back">
+        <div class="score">
+        <span id ="user_score"></span><br>
+        <span id="comp_score"></span><br>
+        <span id="tie"></span><br>
+    </div>
+</body>
+</html>
